@@ -1,0 +1,4 @@
+check process do_firewall
+	with matching ".*do_firewall.py"
+	start program = "/usr/local/bin/supervisorctl start do_firewall_server:"
+	stop program = "/usr/local/bin/supervisorctl stop do_firewall_server:"

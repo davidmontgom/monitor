@@ -1,0 +1,35 @@
+<% @role_list_hc.each do |role| %>
+
+
+
+[program:<%="#{role}"%>]
+
+command = /usr/bin/python /var/feed-devops/remote-services/datacenter_worker_healthcheck_solo.py --server_type <%="#{role}"%>
+
+
+process_name=%(program_name)s
+autostart=true
+autorestart=true
+stopsignal=KILL
+stopasgroup = true
+killasgroup = true
+
+
+stdout_logfile=/tmp/supervisor_<%="#{role}"%>.log
+stdout_logfile_maxbytes=100MB
+stdout_logfile_backups=10
+
+stderr_logfile = /tmp/supervisor_<%="#{role}"%>.err
+stderr_logfile_maxbytes=10MB
+stderr_logfile_backups=10
+
+
+[group:<%="#{role}"%>_server]
+programs=<%="#{role}"%>
+
+
+<% end %>
+
+
+
+

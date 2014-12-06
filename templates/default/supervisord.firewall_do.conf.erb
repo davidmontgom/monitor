@@ -1,0 +1,19 @@
+[program:do_firewall]
+command = /usr/bin/python /var/feed-devops/remote-services/do_firewall.py
+autostart=true
+autorestart=true
+
+stopsignal=KILL
+stopasgroup = true
+killasgroup = true
+
+stdout_logfile=/tmp/do_firewall.log
+stdout_logfile_maxbytes=100MB
+stdout_logfile_backups=10
+
+stderr_logfile = /tmp/do_firewall.err
+stderr_logfile_maxbytes=10MB
+stderr_logfile_backups=10
+
+[group:do_firewall_server]
+programs=do_firewall

@@ -1,0 +1,29 @@
+
+[program:mab_monitor]
+
+command = /usr/bin/python /var/feed-devops/remote-services/mab_monitor.py
+
+process_name=%(program_name)s
+autostart=true
+autorestart=true
+stopsignal=KILL
+stopasgroup = true
+killasgroup = true
+
+
+stdout_logfile=/tmp/supervisor_mab_monitor.log
+stdout_logfile_maxbytes=100MB
+stdout_logfile_backups=10
+
+stderr_logfile = /tmp/supervisor_mab_monitor.err
+stderr_logfile_maxbytes=10MB
+stderr_logfile_backups=10
+
+
+[group:mab_monitor_server]
+programs=mab_monitor
+
+
+
+
+

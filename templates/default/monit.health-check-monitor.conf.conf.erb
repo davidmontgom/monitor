@@ -1,0 +1,8 @@
+<% @role_list_hc.each do |role| %>
+
+check process health_check_<%="#{role}"%>
+	with matching "--server_type <%="#{role}"%>"
+	start program = "/usr/local/bin/supervisorctl start <%="#{role}"%>_server:"
+	stop program = "/usr/local/bin/supervisorctl stop <%="#{role}"%>_server:"
+
+<% end %>
