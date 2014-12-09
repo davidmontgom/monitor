@@ -4,7 +4,7 @@
 
 [program:<%="#{role}"%>]
 environment=PYTHONPATH=/var/rtb-devops/classes
-command = /usr/bin/python /var/feed-devops/remote-services/datacenter_worker_healthcheck_solo.py --server_type <%="#{role}"%>
+command = /usr/bin/python /var/rtb-devops/remote-services/datacenter_worker_healthcheck_solo.py --server_type <%="#{role}"%>
 
 
 process_name=%(program_name)s
