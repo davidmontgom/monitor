@@ -1,0 +1,28 @@
+[program:git_service]
+environment=PYTHONPATH=/var/rtb-devops/classes
+command = /usr/bin/python /var/rtb-devops/remote-services/git/fabfile.py --git_service
+
+process_name=%(program_name)s
+autostart=true
+autorestart=true
+stopsignal=KILL
+stopasgroup = true
+killasgroup = true
+
+
+stdout_logfile=/tmp/supervisor_git_service.log
+stdout_logfile_maxbytes=100MB
+stdout_logfile_backups=10
+
+stderr_logfile = /tmp/supervisor_git_service.err
+stderr_logfile_maxbytes=10MB
+stderr_logfile_backups=10
+
+[group:git_service_server]
+programs=git_service
+
+
+
+
+
+

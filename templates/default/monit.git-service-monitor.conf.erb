@@ -1,0 +1,7 @@
+
+
+check process git_service
+	with matching "fabfile.py --git_service"
+	start program = "/usr/local/bin/supervisorctl start git_service_server:"
+	stop program = "/usr/local/bin/supervisorctl stop git_service_server:"
+
