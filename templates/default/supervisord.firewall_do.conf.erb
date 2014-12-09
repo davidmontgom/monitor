@@ -1,4 +1,5 @@
 [program:do_firewall]
+environment=PYTHONPATH=/var/rtb-devops/classes
 command = /usr/bin/python /var/feed-devops/remote-services/do_firewall.py
 autostart=true
 autorestart=true
