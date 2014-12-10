@@ -37,9 +37,7 @@ end
 easy_install_package "python-digitalocean" do
   action :install
 end
-easy_install_package "apache-libcloud" do
-  action :install
-end
+
 easy_install_package "fabric" do
   action :install
 end
@@ -63,4 +61,16 @@ end
 package "python-redis" do
   action :install
 end
+
+bash "apache-libcloud" do
+    user "root"
+    code <<-EOH
+      pip install apache-libcloud
+      touch /var/chef/cache/apache-libcloud.lock
+  EOH
+  action :run
+  not_if {File.exists?("/var/chef/cache/apache-libcloud.lock")}
+end
+
+
 
