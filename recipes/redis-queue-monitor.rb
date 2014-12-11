@@ -1,7 +1,7 @@
 
 redis_queue = node['monitor']['redis_queue'] 
 redis_queue=redis_queue.to_json
-file "/var" do
+file "/var/redis_queue_list.json" do
   owner 'root'
   group 'root'
   mode '0666'
