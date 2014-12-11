@@ -1,5 +1,5 @@
 default['monitor']['role_list_hc'] = []
-default['monitor']['"redis_queue"'] = []
+default['monitor']['redis_queue'] = []
 
 
 

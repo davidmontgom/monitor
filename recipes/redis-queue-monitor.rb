@@ -1,4 +1,13 @@
 
+redis_queue = node['monitor']['redis_queue'] 
+redis_queue=redis_queue.to_json
+file "/var" do
+  owner 'root'
+  group 'root'
+  mode '0666'
+  content "#{redis_queue}"
+end
+
 service "supervisord"
 template "/etc/supervisor/conf.d/redis-queue-monitor.conf" do
   path "/etc/supervisor/conf.d/redis-queue-monitor.conf"
