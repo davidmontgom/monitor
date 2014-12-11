@@ -5,7 +5,7 @@ file "/var/redis_queue_list.json" do
   owner 'root'
   group 'root'
   mode '0666'
-  content "#{redis_queue}"
+  content redis_queue
 end
 
 service "supervisord"
