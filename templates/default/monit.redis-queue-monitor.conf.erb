@@ -1,0 +1,5 @@
+check process redis_queue_monitor
+	with matching "redis_queue_monitor.py"
+	start program = "/usr/local/bin/supervisorctl start redis_queue_monitor_server:"
+	stop program = "/usr/local/bin/supervisorctl stop redis_queue_monitor_server:"
+
