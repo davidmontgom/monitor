@@ -53,7 +53,9 @@ end
 package "libyaml-dev" do
   action :install
 end
-
+package "at" do
+  action :install
+end
 easy_install_package "pychef" do
   action :install
 end
