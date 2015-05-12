@@ -56,6 +56,9 @@ end
 package "at" do
   action :install
 end
+package "python-pip" do
+  action :install
+end
 easy_install_package "pychef" do
   action :install
 end
