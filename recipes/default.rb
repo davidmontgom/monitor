@@ -7,6 +7,12 @@ end
 easy_install_package "paramiko" do
   action :install
 end
+easy_install_package "libcurl4-openssl-dev" do
+  action :install
+end
+easy_install_package "pycurl" do
+  action :install
+end
 easy_install_package "requests" do
   action :install
 end
