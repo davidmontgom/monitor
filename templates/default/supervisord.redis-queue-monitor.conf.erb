@@ -11,12 +11,12 @@ killasgroup = true
 
 
 stdout_logfile=/tmp/supervisor_redis_queue_monitor.log
-stdout_logfile_maxbytes=100MB
-stdout_logfile_backups=10
+stdout_logfile_maxbytes=1MB
+stdout_logfile_backups=1
 
 stderr_logfile = /tmp/supervisor_redis_queue_monitor.err
-stderr_logfile_maxbytes=10MB
-stderr_logfile_backups=10
+stderr_logfile_maxbytes=1MB
+stderr_logfile_backups=1
 
 [group:redis_queue_monitor_server]
 programs=redis_queue_monitor

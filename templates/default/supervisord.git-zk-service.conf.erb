@@ -1,6 +1,6 @@
 [program:git_service]
 environment=PYTHONPATH=/var/rtb-devops/classes
-command = /usr/bin/python /var/rtb-devops/remote-services/pushers/git/fabfile.py --git_service
+command = /usr/bin/python /var/rtb-devops/remote-services/git-zk.py
 
 process_name=%(program_name)s
 autostart=true
