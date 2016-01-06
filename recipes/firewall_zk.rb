@@ -1,10 +1,4 @@
 
-easy_install_package "timeout" do
-  action :install
-end
-easy_install_package "stopwatch" do
-  action :install
-end
 easy_install_package "paramiko" do
   action :install
 end
