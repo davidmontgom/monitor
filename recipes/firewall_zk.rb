@@ -14,4 +14,4 @@ template "/etc/supervisor/conf.d/firewall.conf" do
   group "root"
   mode "0755"
   notifies :restart, resources(:service => "supervisord")
-end
+end 
