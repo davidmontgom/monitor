@@ -1,7 +1,4 @@
 
-easy_install_package "dop" do
-  action :install
-end
 easy_install_package "timeout" do
   action :install
 end
@@ -9,6 +6,9 @@ easy_install_package "stopwatch" do
   action :install
 end
 easy_install_package "paramiko" do
+  action :install
+end
+easy_install_package "zc.zk" do
   action :install
 end
 
