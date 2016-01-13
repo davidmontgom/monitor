@@ -5,7 +5,7 @@ template "/etc/nginx/sites-available/docs.nginx.conf" do
   group "root"
   mode "0644"
   notifies :reload, resources(:service => "nginx")
-  variables :nginx_port => nginx_port, :uwsgi_port => uwsgi_port
+  #variables :nginx_port => nginx_port, :uwsgi_port => uwsgi_port
 end
 
 link "/etc/nginx/sites-enabled/docs.nginx.conf" do
