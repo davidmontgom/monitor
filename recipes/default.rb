@@ -10,9 +10,7 @@ end
 package "libcurl4-openssl-dev" do
   action :install
 end
-easy_install_package "pycurl" do
-  action :install
-end
+
 easy_install_package "requests" do
   action :install
 end
@@ -66,6 +64,9 @@ package "python-pip" do
   action :install
 end
 easy_install_package "pychef" do
+  action :install
+end
+package "python-pycurl" do
   action :install
 end
 
