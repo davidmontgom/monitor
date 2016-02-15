@@ -21,10 +21,7 @@ easy_install_package "hiredis" do
   action :install
 end
 easy_install_package "redis" do
-  action :install
-end
-easy_install_package "stopwatch" do
-  action :install
+  action :upgrade
 end
 easy_install_package "timeout" do
   action :install
@@ -70,9 +67,7 @@ package "python-pycurl" do
   action :install
 end
 
-package "python-redis" do
-  action :install
-end
+
 
 bash "apache-libcloud" do
     user "root"
