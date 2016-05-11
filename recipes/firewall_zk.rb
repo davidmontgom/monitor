@@ -1,5 +1,14 @@
 
+package "libffi-dev" do
+  action :install
+end
+
+package "libssl-dev" do
+  action :install
+end
+
 easy_install_package "paramiko" do
+  options "-U"
   action :install
 end
 easy_install_package "zc.zk" do
